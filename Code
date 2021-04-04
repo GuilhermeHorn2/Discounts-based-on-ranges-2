@@ -1,0 +1,44 @@
+tc = input('Type of meat:')
+kc = float(input('Kilograms of meat:'))
+card = input(':')
+
+if tc == 'F':
+    if kc <= 5 and card == 'yes':
+        v = kc*4.9*0.95
+    elif kc > 5 and card == 'yes':
+        v = 5 * 4.9 * 0.95 * (kc - 5)*5.8
+    elif kc <= 5:
+        v = kc * 4.9
+    else:
+        v = 5 * 4.9 * (kc - 5) * 5.8
+    print('valor a pagar:',round(v,2))
+    print('desconto do caratao:',round((v/0.95)*0.05),2)
+
+elif tc == 'A':
+    if kc <= 5 and card == 'yes':
+        v = kc*5.9*0.95
+    elif kc > 5 and card == 'yes':
+        v = 5 * 5.9 * 0.95 * (kc - 5)*6.8
+    elif kc <= 5:
+        v = kc * 5.9
+    else:
+        v = 5 * 5.9 * (kc - 5) * 6.8
+    print('valor a pagar:',round(v,2))
+    print('desconto do caratao:',round((v/0.95)*0.05),2)
+
+elif tc == 'P':
+    if kc <= 5 and card == 'yes':
+        v = kc*6.9*0.95
+    elif kc > 5 and card == 'yes':
+        v = 5 * 6.9 * 0.95 * (kc - 5)*7.8
+    elif kc <= 5:
+        v = kc * 6.9
+    else:
+        v = 5 * 6.9 * (kc - 5) * 7.8
+    print('valor a pagar:',round(v,2))
+    print('desconto do cartao:',round((v/0.95)*(0.05),2))
+elif card != 'yes' or card != 'no':
+    print('Please write correctly')
+else:
+    print('Please write correctly')
+
